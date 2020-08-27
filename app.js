@@ -14,9 +14,10 @@ app = setting.setting(app);
 app.get('/',function(req,res){
     res.send('系统启动成功！')
 })
-let a = myFun.Mongo;
-a.setInfo('xiao','20160626','mongodb://localhost:27017/xiaoqiang');
-a.connectMoGo();
+//数据库的连接
+// let a = myFun.Mongo;
+// a.setInfo('xiao','20160626','mongodb://localhost:27017/xiaoqiang');
+// a.connectMoGo();
 
 //服务器的状态监听
 app.listen(port,()=>{

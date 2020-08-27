@@ -109,6 +109,7 @@ class MongoDB {
             }
         })  
     }
+    
 }
 
 module.exports = {
