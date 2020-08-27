@@ -86,6 +86,8 @@ class MongoDB {
         this.user = null;
         this.pass = null;
         this.url = null;
+        this.Schema = mongoose.Schema;
+        this.schemaList = {};
     };
     setInfo (accout,password,url) {
         this.user = accout;
@@ -108,8 +110,24 @@ class MongoDB {
                 return 1;
             }
         })  
+    };
+    setSchema (schemaName,schemaObj) {
+        this.schemaList[schemaName] = mongoose.model(schemaName,new this.Schema(schemaObj))
+    };
+    mogoFind (schemaName,searchInfo,callback) {
+        this.schemaList[schemaName].find(searchInfo,function (err,data) {
+            callback(err,data);
+        })
+    };
+    mogoSave (schemaName,schemaObj,callback) {
+        const SaveInfo = new this.schemaList[schemaName](schemaObj);
+        SaveInfo.save(function (err) {
+            callback(err)
+        })
     }
-    
+
+
+
 }
 
 module.exports = {
