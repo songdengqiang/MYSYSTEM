@@ -1,6 +1,10 @@
 let express = require('express');
 let myFun = require('./myPackage.js')
 let setting = require('./setting.js')
+let fs = require('fs')
+let iconv = require('iconv-lite')
+let child_process = require('child_process');
+const { stderr, argv, argv0 } = require('process');
 
 
 let port = 8080;
@@ -33,7 +37,34 @@ app.get('/save',function(req,res){
         res.send([err,'成功'])
     })
 })
-//数据库的连接
+//子进程的测试
+app.get('/ceshi',function(req,res){
+    let pythonName = 'ceshi.py'
+    var ceshi = child_process.exec('python ./public/python/' + pythonName,{encoding:'binary'},function(err,stdout,stdEerr){
+        if(err){
+            console.log(err.stack)
+        }
+        // console.log(
+        //     iconv.decode(new Buffer(stdout,'binary'),'gb2312')
+        // )
+        res.send(iconv.decode(new Buffer(stdout,'binary'),'gb2312'))
+    })
+})
+app.get('/wenda',function(req,res){
+    let pythonName = 'ceshi.py'
+    var ceshi = child_process.exec('python ./public/python/', + pythonName,{encoding:'binary'},argv0,function(err,stdout,stdEerr){
+        if(err){
+            console.log(err.stack)
+        }
+        // console.log(
+        //     iconv.decode(new Buffer(stdout,'binary'),'gb2312')
+        // )
+        res.send(iconv.decode(new Buffer(stdout,'binary'),'gb2312'))
+    })
+})
+
+
+
 
 
 
