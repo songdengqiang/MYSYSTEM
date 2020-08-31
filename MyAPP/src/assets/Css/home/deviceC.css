@@ -1,0 +1,190 @@
+.DeviceMain{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.DeviceMain>div:nth-child(1){
+    position: relative;
+    width: 25%;
+    height: 98%;
+    /* border: yellow 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.DeviceMain>div:nth-child(2){
+    position: relative;
+    width: 74%;
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    /* border: yellow 1px solid; */
+}
+.tongjiInfo1>section:nth-child(1){
+    width: 100%;
+    height: 40%;
+}
+.tongjiInfo1>section:nth-child(2){
+    width: 100%;
+    height: 60%;
+}
+.DeviceTR{
+    justify-content: space-between;
+}
+.DeviceTR>td:nth-child(1){
+    justify-content: flex-start;
+}
+.DeviceTR>td:nth-child(2){
+    justify-content: flex-end;
+}
+.tongjiInfo3{
+    height: 10%;
+}
+.tongjiInfo4{
+    height: 90%;
+    flex-direction: column;
+}
+.tongjiInfo5{
+    border-bottom: grey 1px dashed;
+}
+.tongjiInfo5>section{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.tongjiInfo5>section:nth-child(1){
+    width: 30%;
+}
+.tongjiInfo5>section:nth-child(2){
+    width: 70%;
+}
+.divIcon1{
+    border: orange 10px solid;
+}
+.divIcon2{
+    border: red 10px solid;
+}
+.divIcon3{
+    border: grey 10px solid;
+}
+.IconTR{
+    border: none;
+}
+.IconTR>td>div:nth-child(1){
+    width: 10%;
+    height: 40%;
+    border-radius: 2%;
+    background-color: greenyellow;
+}
+.IconTR>td>div:nth-child(3){
+    width: 10px;
+    height: 10px;
+    border-radius: 2%;
+    border-radius: 1px;
+    border-top: gray 3px solid;
+    border-right: gray 3px solid;
+    transform: rotate(-135deg);
+}
+#yujing11{
+    background-color: orange;
+}
+#guzhang1{
+    background-color: red;
+}
+#weihu1{
+    background-color: gray;
+}
+/* 第二部分设备的选择 */
+.tongjiInfo2::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom,#59cdf7,black);
+    /* background-color: greenyellow; */
+}
+.tongjiInfo2::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top,#59cdf7,black);
+    /* background-color: greenyellow; */
+}
+.deviceIconImg>img{
+    width: 100%;
+    height: 60%;
+}
+.deviceIn{
+    width: 15.5%;
+    height: 14%;
+    min-height: 10%;
+    margin-left: 15px;
+    box-shadow: grey 0 0 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: seashell;
+    cursor: pointer;
+}
+.deviceIn::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 0;
+    border-top: seashell 2px solid;
+    border-left: seashell 2px solid;
+}
+.deviceIn::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0;
+    bottom: 0;
+    border-right: seashell 2px solid;
+    border-bottom: seashell 2px solid;
+}
+.deviceIn>div:nth-child(1){
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.deviceIn>div:nth-child(2){
+    font-size: 0.8rem;
+    margin-left: 10px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.deviceIn>div:nth-child(2)>div{
+    width: 100%;
+    height: 20%;
+    text-align: left;
+}

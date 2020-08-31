@@ -1,0 +1,43 @@
+.decoration1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.decoration1>div{
+    width: 10px;
+    height: 10px;
+    border: #59cdf7 1px solid;
+    border-radius: 10px;
+    animation-name: colorC;
+}
+@keyframes colorC{
+    10%{
+        background: greenyellow;
+    }
+}
+.decoration1>div:nth-child(1){
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+.decoration1>div:nth-child(2){
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+.decoration1>div:nth-child(3){
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+.decoration1>div:nth-child(4){
+    animation-duration: 5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+}
+.decoration1>div:nth-child(5){
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}

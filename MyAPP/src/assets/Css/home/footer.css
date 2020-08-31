@@ -1,0 +1,21 @@
+.footerCss{
+    width: 100vw;
+    height: 3vh;
+    border-top: #59cdf7 2px solid;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    box-shadow: aquamarine 0 0 5px;
+}
+.footerCss>h6:nth-child(1){
+    position: absolute;
+    left: 15px;
+}
+.footerCss>h6:nth-child(3){
+    position: absolute;
+    right: 15px;
+}
+

@@ -7,7 +7,7 @@ let child_process = require('child_process');
 let Home = require('./router/home');
 let Login = require('./router/login');
 
-let port = 8080;
+let port = 8999;
 let host =myFun.pathFun.getLocalIpv4();
 
 let app = express();  //初始化一个页面服务器
@@ -17,7 +17,7 @@ app = setting.setting(app);
 
 
 //路由的配置
-app.use('/',function(req,res){
+app.get('/',function(req,res){
     res.send('系统启动！')
 })
 app.use('/login',Login);

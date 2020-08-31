@@ -1,0 +1,22 @@
+.decoration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.decoration>div{
+    margin-left: 1%;
+    width: 2%;
+    height: 100%;
+    background-color: aquamarine;
+}
+.decoration>div:first-child{
+    width: 20%;
+    height: 12px;
+    background-color: aquamarine;
+}
+.decoration>div:nth-child(14){
+    width: 20%;
+    height: 100%;
+    background-color: aquamarine;
+}
