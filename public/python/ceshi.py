@@ -1,8 +1,9 @@
+import sys
 from fastHan import FastHan
 
 model = FastHan()
 
-sentance = argv0
+sentance =sys.argv[1]
 
 answer = model(sentance,target="Parsing")
 
