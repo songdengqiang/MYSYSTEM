@@ -19,13 +19,14 @@
 .leftBar{
     width: 30%;
     height: 99%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border: gray 1px solid;
 }
 .centerBar{
     position: relative;
     width: 50%;
     height: 99%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .rightBar{
     width: 30%;
@@ -34,43 +35,72 @@
 /* 左边菜单栏样式设置 */
 .leftBar>div{
     position: relative;
+    color: white;
     width: 95%;
-    /* border: greenyellow 1px solid; */
 }
 .leftBar>div:nth-child(1){
-    height: 20%;
-    /* top: -2%; */
-}
-.leftBar>div:nth-child(2){
-    top: 0.5%;
-    height: 75%;
     position: relative;
+    height: 30%;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.leftBar>div:nth-child(2){
+    height: 68%;
+    /* border: 1px solid white; */
+}
+.inputs{
+    width: 85%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.deviceInfo>div:nth-child(1){
+.control2{
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: goldenrod;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.titleInfo2{
+    margin-top: 3px;
+    color: wheat;
+}
+.inputs1{
+    width: 80%;
+    height: 20%;
+}
+.sumbmit1{
+    border: grey 1px solid;
+    margin-top: 5px;
+    width: 50%;
+    background-color: lightgreen;
+}
+#textarea1{
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+    margin-top: 5px;
+    width: 98%;
+}
+#textarea2{
+    margin-top: 5px;
+    width: 98%;
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+}
+.kGqa{
     width: 100%;
-    height: 40%;
-}
-.deviceInfo>div:nth-child(2){
-    width: 100%;
-    height: 55%;
-}
-.deviceInfo1>table>tr:nth-child(1){
-    height:30%;
-    text-align: center;
-}
-.contentInfoss>td{
-    width: 13.3%;
-    text-align: center;
-}
-.contentInfoss>td>div{
-    width: 15px;
-    height: 15px;
-    border-radius: 7.5px;
-    background:repeating-radial-gradient(greenyellow,black);
+    height: 66%;
+    background-color: black;
+    border: white 1px solid;
+    border-radius: 10px;
 }
 
 /* 中间菜单样式设置 */
@@ -88,8 +118,9 @@
 }
 .centerBar>div:nth-child(2){
     height: 54%;
-    background: #356b59;
-    box-shadow: #356b59 0 0 40px;
+    color: wheat;
+    background: black;
+    box-shadow: #356b59 0 0 80px;
 }
 .centerBar>div:nth-child(3){
     height: 40%;

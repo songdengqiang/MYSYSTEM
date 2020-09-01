@@ -53,19 +53,19 @@
         </div>
       </div>
       <div class="topBar topBar1">
-        <div class="btns">实时监控</div>
-        <div class="btns">设备信息</div>
-        <div class="btns">仓储信息</div>
+        <div class="btns">知识图管理</div>
+        <div class="btns">知识推荐</div>
+        <div class="btns">知识分析</div>
       </div>
       <div class="topBar topBar2">
-        <div class="btns">故障信息</div>
-        <div class="btns">维修记录</div>
+        <div class="btns">知识查询</div>
+        <div class="btns">其余模块</div>
         <div class="btns">系统设置</div>
       </div>
     </header>
     <router-view></router-view>
     <footer class="footerCss">
-      <h6>系统的设置</h6>
+      <h6>KG小组（宋邓强）</h6>
       <h6>东华大学机械工程智能制造研究所</h6>
       <h6 >日期：{{times}}</h6>
     </footer>

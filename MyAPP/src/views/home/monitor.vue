@@ -1,162 +1,39 @@
 <template>
     <main class="contentInfo">
       <div class="leftBar">
-        <div class="deviceInfo1">
-          <table>
-            <tr class="contentInfoss">
-              <th class="titles">基础信息</th>
-            </tr>
-            <tr class="contentInfoss">
-              <td>纺丝产线</td>
-              <td>纺丝位号</td>
-              <td>纺丝速度(m/min)</td>
-              <td>剩余时间(sec)</td>
-              <td>当前卷径(mm)</td>
-              <td>络筒时间</td>
-              <td>丝线品种</td>
-            </tr>
-            <tr class="contentInfoss">
-              <td>L1</td>
-              <td>21</td>
-              <td>3160</td>
-              <td>8678</td>
-              <td>319</td>
-              <td>16:02:54</td>
-              <td>经纶 0.05</td>
-            </tr>
-          </table>
+        <div>
+          <div class="inputs">
+            <div>运行的模块:</div>
+            <input type="text"  v-model="pyName">
+            <div class="control2" @click="checkDiv()"></div>
+          </div>
+          <div class="titleInfo2"><strong>请输入你的相关变量（问题)</strong> </div>
+          <textarea name="" id="textarea1" cols="40" rows="5" placeholder="请输入相关参数！" v-model="textParam"></textarea>
+          <button class="sumbmit1" @click="sumbmitParam()">提交</button>
         </div>
-        <div class="deviceInfo">
-          <div class="deviceInfo1">
-            <table>
-              <tr class="contentInfoss">
-                <th class="titles">传感器状态</th>
-              </tr>
-              <tr class="contentInfoss">
-                <td>压辊保护</td>
-                <td><div></div></td>
-                <td>A卡头识别</td>
-                <td><div></div></td>
-                <td>微动探头</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>B卡头识别</td>
-                <td><div></div></td>
-                <td>生头杆原位</td>
-                <td><div></div></td>
-                <td>A卡头到位</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>生头杆到位</td>
-                <td><div></div></td>
-                <td>B卡头到位</td>
-                <td><div></div></td>
-                <td>移丝板到位</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>切换位置判断</td>
-                <td><div></div></td>
-                <td>铲板原位</td>
-                <td><div></div></td>
-                <td>护板原位</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>伺服报警</td>
-                <td><div></div></td>
-                <td>导盘变频报警</td>
-                <td><div></div></td>
-                <td>推筒原位</td>
-                <td><div></div></td>
-              </tr>
-            </table>
-          </div>
-          <div class="deviceInfo1">
-            <table>
-              <tr class="contentInfoss">
-                <th class="titles">PLC输出状态</th>
-              </tr>
-              <tr class="contentInfoss">
-                <td>压辊下降缓</td>
-                <td><div></div></td>
-                <td>尾丝器动作</td>
-                <td><div></div></td>
-                <td>转盘微动</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>压辊升降</td>
-                <td><div></div></td>
-                <td>移丝板动作</td>
-                <td><div></div></td>
-                <td>转盘慢速</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>推筒出</td>
-                <td><div></div></td>
-                <td>卡头刹车</td>
-                <td><div></div></td>
-                <td>导盘升速</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>推筒回</td>
-                <td><div></div></td>
-                <td>松筒</td>
-                <td><div></div></td>
-                <td>网络控制</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>护板动作</td>
-                <td><div></div></td>
-                <td>伺服脉冲复位</td>
-                <td><div></div></td>
-                <td>吸丝切丝</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>尾丝器到位</td>
-                <td><div></div></td>
-                <td>伺服使能</td>
-                <td><div></div></td>
-                <td>满卷预报</td>
-                <td><div></div></td>
-              </tr>
-              <tr class="contentInfoss">
-                <td>铲板动作</td>
-                <td><div></div></td>
-                <td>伺服制动</td>
-                <td><div></div></td>
-                <td>推筒到位</td>
-                <td><div></div></td>
-              </tr>
-            </table>
-          </div>
+        <div>
+          <div class="kGqa">推荐结果网络</div>
+          <textarea name="" id="textarea2" cols="50" rows="7" v-model="textResult"></textarea>
         </div>
       </div>
       <div class="centerBar">
         <div class="headerInfo">
           <div class="titleIcon">
             <img src="../../assets/img/设备监控.svg" alt="图标">
-            <div @click="Switch()">设备的选择</div>
+            <div @click="Switch()">网络全局显示</div>
           </div>
           <div class="titles">Map OverView</div>
-          <div>设备介绍</div>
+          <div>人员知识网络</div>
         </div>
         <div class="deviceImg">
-          <img src="../../assets/img/device.jpg" alt="设备">
+          <div>知识网络</div>
         </div>
         <div class="footerInfo">
           <div class="topBar topBar3">
-            <div class="btns choose choose1" @click="changDate(1)">卡头</div>
-            <div class="btns choose choose2" @click="changDate(2)">摩擦辊</div>
-            <div class="btns choose choose3" @click="changDate(3)">横动</div>
-            <div class="btns choose choose4" @click="changDate(4)">电机</div>
+            <div class="btns choose choose1" @click="changDate(1)">人员网络</div>
+            <div class="btns choose choose2" @click="changDate(2)">设备网络</div>
+            <div class="btns choose choose3" @click="changDate(3)">物料网络</div>
+            <div class="btns choose choose4" @click="changDate(4)">工艺网络</div>
           </div>
           <div class="deviceInfo1">
             <table>
@@ -175,61 +52,23 @@
         </div>
       </div>
       <div class="rightBar">
-        <div class="curveInfo">
-          <div>{{titleName1}}变化曲线</div>
-          <div id="curve1"></div>
-          <div id="curve2"></div>
-          <div class="monitorInfo">
-            <div>状态</div>
-            <div>运行</div>
-            <div>检修</div>
-            <div>故障</div>
-            <div>待机</div>
-            <div>离线</div>
-          </div>
-          <div class="monitorInfo">
-            <div>等级</div>
-            <div>正常</div>
-            <div>轻微偏移</div>
-            <div>超出界限</div>
-            <div>严重故障</div>
-            <div></div>
-          </div>
-        </div>
-        <div class="curveInfo">
-          <div>{{titleName2}}变化曲线</div>
-          <div id="curve3"></div>
-          <div id="curve4"></div>
-          <div class="monitorInfo">
-            <div>状态</div>
-            <div>运行</div>
-            <div>检修</div>
-            <div>故障</div>
-            <div>待机</div>
-            <div>离线</div>
-          </div>
-          <div class="monitorInfo">
-            <div>等级</div>
-            <div>正常</div>
-            <div>轻微偏移</div>
-            <div>超出界限</div>
-            <div>严重故障</div>
-            <div></div>
-          </div>
-        </div>
       </div>
     </main>
 </template>>
 
 <script>
 import api from '@/assets/Js/home/home'
+import axios from 'axios'
 import * as d3 from 'd3'
 export default {
   name: 'monitor',
   data () {
     return {
-      titleName1: '卡头1',
-      titleName2: '卡头2',
+      pyName: 'qaSystem/test.py',
+      textParam: '',
+      textResult: '',
+      titleName1: '上一组',
+      titleName2: '下一组',
       datass: [
         { name1: '卡头1频率(Hz)', name1Value: 53.01, name2: '卡头2频率(Hz)', name2Value: 0 },
         { name1: '卡头1转速(rpm)', name1Value: 3148, name2: '卡头1转速(rpm)', name2Value: 0 },
@@ -277,8 +116,8 @@ export default {
       d3.select(str).style('box-shadow', '#59cdf7 0 0 5px')
       switch (num) {
         case 1:
-          this.titleName1 = '卡头1'
-          this.titleName2 = '卡头2'
+          this.titleName1 = '上一组'
+          this.titleName2 = '下一组'
           this.datass = this.datas1
           api.drawBar('curve1', this.datas[0])
           api.drawBar('curve2', this.datas[1])
@@ -286,8 +125,8 @@ export default {
           api.drawBar('curve4', this.datas[3])
           break
         case 2:
-          this.titleName1 = '摩擦辊里侧'
-          this.titleName2 = '摩擦辊外侧'
+          this.titleName1 = '上一组'
+          this.titleName2 = '下一组'
           this.datass = this.datas2
           api.drawBar('curve1', this.datas[1])
           api.drawBar('curve2', this.datas[0])
@@ -295,8 +134,8 @@ export default {
           api.drawBar('curve4', this.datas[2])
           break
         case 3:
-          this.titleName1 = '同步带'
-          this.titleName2 = '气缸'
+          this.titleName1 = '上一组'
+          this.titleName2 = '下一组'
           this.datass = this.datas3
           api.drawBar('curve1', this.datas[1])
           api.drawBar('curve2', this.datas[3])
@@ -304,8 +143,8 @@ export default {
           api.drawBar('curve4', this.datas[2])
           break
         case 4:
-          this.titleName1 = '卡头1电机'
-          this.titleName2 = '卡头2电机'
+          this.titleName1 = '上一组'
+          this.titleName2 = '下一组'
           this.datass = this.datas4
           api.drawBar('curve1', this.datas[3])
           api.drawBar('curve2', this.datas[1])
@@ -316,6 +155,15 @@ export default {
     },
     Switch () {
       this.$router.push('deviceC')
+    },
+    sumbmitParam () {
+      var paramInfo = {}
+      paramInfo.pyName = this.pyName
+      paramInfo.textParam = this.textParam
+      axios.post(this.GLOBEL.pathID + '/home/pyChild', paramInfo).then(res => {
+        this.textResult = res.data
+        console.log(res.data)
+      })
     }
   },
   mounted () {
